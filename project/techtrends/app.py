@@ -6,7 +6,7 @@ import logging
 
 logging.basicConfig(
         level=logging.DEBUG,
-        format='%(asctime)s:%(name)s:%(message)s'
+        format='[%(levelname)-6s %(asctime)s]:%(name)-10s:%(message)s' #  changed this to a different format
         )
 
 logger = logging.getLogger('app')
