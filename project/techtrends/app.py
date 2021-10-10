@@ -47,10 +47,10 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-      logger.debug(f"Article with id: {post_id} not found")
+      logger.debug("Article with id: " + post_id + "not found") #  no f-strings in python 2.7 (for docker container)
       return render_template('404.html'), 404
     else:
-      logger.debug(f"Article: '{post['title']}' Retrieved")
+      logger.debug("Article: " + post['title'] + " Retrieved")
       return render_template('post.html', post=post)
 
 # Define the About Us page
@@ -69,7 +69,7 @@ def create():
         if not title:
             flash('Title is required!')
         else:
-            logger.debug(f"New Article Created: '{title}'")
+            logger.debug("New Article Created: '" + title)
             connection = get_db_connection()
             connection.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
