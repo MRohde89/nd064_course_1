@@ -1,11 +1,33 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
-
+sudo docker build -t techtrends .
 ## Docker commands used to run the application
 # TODO: insert the docker run command
-
+sudo docker run -p 7111:3111 --name techtrends -d techtrends
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
-
+sudo docker logs techtrends
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+[INFO   2021-10-10 11:35:18,845]:werkzeug  : * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+[INFO   2021-10-10 11:36:16,781]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:16] "GET / HTTP/1.1" 200 -
+[DEBUG  2021-10-10 11:36:18,155]:app       :Article: 2020 CNCF Annual Report Retrieved
+[INFO   2021-10-10 11:36:18,158]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:18] "GET /1 HTTP/1.1" 200 -
+[INFO   2021-10-10 11:36:19,050]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:19] "GET / HTTP/1.1" 200 -
+[DEBUG  2021-10-10 11:36:20,479]:app       :Retrieved About us page
+[INFO   2021-10-10 11:36:20,481]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:20] "GET /about HTTP/1.1" 200 -
+[INFO   2021-10-10 11:36:21,467]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:21] "GET / HTTP/1.1" 200 -
+[DEBUG  2021-10-10 11:36:22,401]:app       :Article: Kubernetes Certification Retrieved
+[INFO   2021-10-10 11:36:22,402]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:22] "GET /6 HTTP/1.1" 200 -
+[INFO   2021-10-10 11:36:24,096]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:24] "GET /create HTTP/1.1" 200 -
+[DEBUG  2021-10-10 11:36:26,707]:app       :New Article Created: 'test
+[INFO   2021-10-10 11:36:26,713]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:26] "POST /create HTTP/1.1" 302 -
+[INFO   2021-10-10 11:36:26,835]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:26] "GET / HTTP/1.1" 200 -
+[DEBUG  2021-10-10 11:36:30,361]:app       :Article: CNCF Cloud Native Definition v1.0 Retrieved
+[INFO   2021-10-10 11:36:30,362]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:30] "GET /5 HTTP/1.1" 200 -
+[INFO   2021-10-10 11:36:32,792]:werkzeug  :213.232.84.35 - - [10/Oct/2021 11:36:32] "GET / HTTP/1.1" 200 -
